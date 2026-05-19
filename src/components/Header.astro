@@ -1,5 +1,30 @@
 ---
 import { whatsappUrl } from '../data/site';
+
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  {
+    label: 'Layanan',
+    href: '/layanan',
+    isActive: currentPath === '/layanan',
+  },
+  {
+    label: 'Sistem Verd',
+    href: '/sistem-verd',
+    isActive: currentPath === '/sistem-verd',
+  },
+  {
+    label: 'Portfolio',
+    href: '/portfolio',
+    isActive: currentPath === '/portfolio',
+  },
+  {
+    label: 'Kontak',
+    href: '/kontak',
+    isActive: currentPath === '/kontak',
+  },
+];
 ---
 
 <header class="fixed left-0 top-0 z-50 w-full border-b border-stone-200/70 bg-stone-50/90 backdrop-blur">
@@ -9,10 +34,17 @@ import { whatsappUrl } from '../data/site';
     </a>
 
     <nav class="hidden items-center gap-8 text-sm font-medium text-stone-700 md:flex">
-      <a href="/layanan" class="transition hover:text-emerald-800">Layanan</a>
-      <a href="/sistem-verd" class="transition hover:text-emerald-800">Sistem Verd</a>
-      <a href="/portfolio" class="transition hover:text-emerald-800">Portfolio</a>
-      <a href="/kontak" class="transition hover:text-emerald-800">Kontak</a>
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'transition hover:text-emerald-800',
+            item.isActive ? 'font-bold text-emerald-800' : 'text-stone-700',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
     </nav>
 
     <a
@@ -38,11 +70,19 @@ import { whatsappUrl } from '../data/site';
     id="mobile-menu"
     class="hidden border-t border-stone-200 bg-stone-50 px-6 py-4 md:hidden"
   >
-    <nav class="mx-auto flex max-w-6xl flex-col gap-4 text-sm font-medium text-stone-700">
-      <a href="/layanan" class="transition hover:text-emerald-800">Layanan</a>
-      <a href="/sistem-verd" class="transition hover:text-emerald-800">Sistem Verd</a>
-      <a href="/portfolio" class="transition hover:text-emerald-800">Portfolio</a>
-      <a href="/kontak" class="transition hover:text-emerald-800">Kontak</a>
+    <nav class="mx-auto flex max-w-6xl flex-col gap-4 text-sm font-medium">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'transition hover:text-emerald-800',
+            item.isActive ? 'font-bold text-emerald-800' : 'text-stone-700',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+
       <a
         href={whatsappUrl}
         target="_blank"
