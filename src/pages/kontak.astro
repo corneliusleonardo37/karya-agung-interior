@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { site, whatsappUrl } from '../data/site';
+---
+
+<Layout
+  title="Kontak Verd — Konsultasi Design & Build Interior"
+  description="Hubungi Verd untuk konsultasi desain interior, design & build, project management, custom furniture, dan perencanaan biaya proyek interior."
+>
+  <main class="min-h-screen bg-stone-50 text-stone-900">
+    <Header />
+
+    <section class="mx-auto max-w-6xl px-6 pb-20 pt-32">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
+        Kontak Verd
+      </p>
+
+      <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+        Diskusikan kebutuhan ruangmu bersama Verd.
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
+        Mulai dari konsultasi singkat. Ceritakan kebutuhan ruang, lokasi proyek,
+        target budget, dan prioritas pekerjaan.
+      </p>
+    </section>
+
+    <section class="bg-white px-6 py-20">
+      <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-8">
+          <h2 class="text-2xl font-bold">Hubungi Kami</h2>
+
+          <div class="mt-6 space-y-4 text-stone-600">
+            <p>
+              <span class="font-semibold text-stone-900">WhatsApp:</span>
+              {site.whatsappDisplay}
+            </p>
+
+            <p>
+              <span class="font-semibold text-stone-900">Instagram:</span>
+              {site.instagram}
+            </p>
+
+            <p>
+              <span class="font-semibold text-stone-900">Email:</span>
+              {site.email}
+            </p>
+          </div>
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            class="mt-8 inline-flex rounded-full bg-emerald-800 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-900"
+          >
+            Konsultasi via WhatsApp
+          </a>
+        </div>
+
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-8">
+          <h2 class="text-2xl font-bold">Area Layanan</h2>
+
+          <ul class="mt-6 grid gap-3 text-stone-600 sm:grid-cols-2">
+            {site.areas.map((area) => (
+              <li class="rounded-2xl bg-white px-4 py-3">
+                {area}
+              </li>
+            ))}
+          </ul>
+
+          <p class="mt-6 leading-8 text-stone-600">
+            Untuk area lain di sekitar Jabodetabek, kebutuhan proyek bisa dibahas terlebih dahulu
+            melalui konsultasi awal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-stone-50 px-6 py-20">
+      <div class="mx-auto max-w-4xl rounded-3xl bg-emerald-950 p-8 text-white md:p-12">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200">
+          Sebelum Konsultasi
+        </p>
+
+        <h2 class="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
+          Siapkan 4 hal sederhana.
+        </h2>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-2">
+          <div class="rounded-2xl bg-white/10 p-5">
+            <h3 class="font-semibold">1. Lokasi proyek</h3>
+            <p class="mt-2 text-sm leading-7 text-emerald-50/80">
+              Misalnya BSD, Serpong, Tangerang, atau area lain.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white/10 p-5">
+            <h3 class="font-semibold">2. Jenis ruang</h3>
+            <p class="mt-2 text-sm leading-7 text-emerald-50/80">
+              Rumah, apartemen, toko, kantor, kitchen set, wardrobe, dan lainnya.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white/10 p-5">
+            <h3 class="font-semibold">3. Target budget</h3>
+            <p class="mt-2 text-sm leading-7 text-emerald-50/80">
+              Tidak harus pasti. Range kasar sudah cukup untuk mulai diskusi.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white/10 p-5">
+            <h3 class="font-semibold">4. Referensi desain</h3>
+            <p class="mt-2 text-sm leading-7 text-emerald-50/80">
+              Bisa dari Pinterest, Instagram, render, atau foto ruang yang kamu suka.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+
+    <WhatsAppButton />
+  </main>
+</Layout>

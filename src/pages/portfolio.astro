@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import CTASection from '../components/CTASection.astro';
+import { portfolioItems } from '../data/portfolio';
+---
+
+<Layout
+  title="Portfolio Verd — Design & Build Interior"
+  description="Lihat contoh arah desain, konsep interior, dan portfolio pekerjaan Verd untuk rumah, apartemen, kitchen set, dan ruang komersial."
+>
+  <main class="min-h-screen bg-stone-50 text-stone-900">
+    <Header />
+
+    <section class="mx-auto max-w-6xl px-6 pb-20 pt-32">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
+        Portfolio Verd
+      </p>
+
+      <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+        Contoh arah desain dan pekerjaan interior Verd.
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
+        Halaman ini akan menjadi tempat untuk menampilkan render, konsep, dan hasil pekerjaan
+        Verd. Untuk sementara, portfolio masih memakai placeholder.
+      </p>
+    </section>
+
+    <section class="bg-white px-6 py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {portfolioItems.map((item) => (
+            <article class="overflow-hidden rounded-3xl border border-stone-200 bg-stone-50">
+              <div class="flex h-64 items-center justify-center bg-gradient-to-br from-stone-200 to-stone-300">
+                <span class="text-sm font-semibold uppercase tracking-[0.25em] text-stone-500">
+                  Image Placeholder
+                </span>
+              </div>
+
+              <div class="p-6">
+                <p class="text-sm font-semibold text-emerald-700">
+                  {item.category} · {item.location}
+                </p>
+
+                <h2 class="mt-3 text-2xl font-bold">
+                  {item.title}
+                </h2>
+
+                <p class="mt-4 leading-7 text-stone-600">
+                  Studi konsep interior dengan pendekatan ruang yang rapi, fungsional,
+                  dan mudah dikembangkan sesuai kebutuhan proyek.
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-stone-50 px-6 py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl border border-stone-200 bg-white p-8 md:p-12">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
+            Catatan Portfolio
+          </p>
+
+          <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+            Portfolio akan diperkuat dengan render, foto hasil, dan cerita proyek.
+          </h2>
+
+          <p class="mt-5 max-w-3xl leading-8 text-stone-600">
+            Nantinya setiap portfolio sebaiknya berisi nama proyek, lokasi, jenis pekerjaan,
+            tantangan ruang, solusi desain, material utama, dan dokumentasi visual.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+
+    <Footer />
+
+    <WhatsAppButton />
+  </main>
+</Layout>
