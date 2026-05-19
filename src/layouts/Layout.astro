@@ -1,0 +1,64 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Verd — Design & Build Interior Transparan',
+  description = 'Verd membantu pemilik rumah, apartemen, dan bisnis membangun interior dengan sistem desain, RAB, eksekusi, dan laporan biaya yang lebih transparan.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://verd.id" />
+    <meta property="og:site_name" content="Verd" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="canonical" href="https://verd.id" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Verd',
+      description:
+        'Design & build interior dengan sistem biaya, desain, eksekusi, dan laporan proyek yang lebih transparan.',
+      url: 'https://verd.id',
+      areaServed: [
+        'BSD',
+        'Serpong',
+        'Tangerang Selatan',
+        'Jabodetabek'
+      ],
+      serviceType: [
+        'Interior Design',
+        'Design and Build',
+        'Interior Fit-Out',
+        'Project Management',
+        'Custom Furniture'
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: '+6281234567890',
+        availableLanguage: ['Indonesian']
+      }
+    })} />
+  </head>
+
+  <body class="bg-stone-50 antialiased">
+    <slot />
+  </body>
+</html>

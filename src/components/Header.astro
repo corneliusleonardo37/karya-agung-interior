@@ -1,0 +1,27 @@
+---
+import { whatsappUrl } from '../data/site';
+---
+
+<header class="fixed left-0 top-0 z-50 w-full border-b border-stone-200/70 bg-stone-50/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="/" class="text-xl font-bold tracking-tight text-stone-950">
+      Verd
+    </a>
+
+    <nav class="hidden items-center gap-8 text-sm font-medium text-stone-700 md:flex">
+      <a href="#layanan" class="transition hover:text-emerald-800">Layanan</a>
+      <a href="#sistem" class="transition hover:text-emerald-800">Sistem Verd</a>
+      <a href="#proses" class="transition hover:text-emerald-800">Proses</a>
+      <a href="#portfolio" class="transition hover:text-emerald-800">Portfolio</a>
+      <a href="#faq" class="transition hover:text-emerald-800">FAQ</a>
+    </nav>
+
+    <a
+      href={whatsappUrl}
+      target="_blank"
+      class="rounded-full bg-emerald-800 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-900"
+    >
+      WhatsApp
+    </a>
+  </div>
+</header>

@@ -1,0 +1,33 @@
+---
+import { portfolioItems } from '../data/portfolio';
+---
+
+<section id="portfolio" class="bg-stone-50 px-6 py-20">
+  <div class="mx-auto max-w-6xl">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
+      Portfolio
+    </p>
+
+    <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+      Contoh arah desain dan pekerjaan Verd.
+    </h2>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {portfolioItems.map((item) => (
+        <div class="overflow-hidden rounded-3xl border border-stone-200 bg-white">
+          <div class="h-48 bg-gradient-to-br from-stone-200 to-stone-300"></div>
+
+          <div class="p-6">
+            <p class="text-sm text-emerald-700">
+              {item.category} · {item.location}
+            </p>
+
+            <h3 class="mt-2 text-xl font-semibold">
+              {item.title}
+            </h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
