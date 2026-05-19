@@ -1,10 +1,16 @@
 ---
 import '../styles/global.css';
+import { site } from '../data/site';
 
 const {
   title = 'Verd — Design & Build Interior Transparan',
   description = 'Verd membantu pemilik rumah, apartemen, dan bisnis membangun interior dengan sistem desain, RAB, eksekusi, dan laporan biaya yang lebih transparan.',
+  canonicalPath = '/',
 } = Astro.props;
+
+const normalizedCanonicalPath =
+  canonicalPath === '/' ? '/' : `/${canonicalPath.replace(/^\/+|\/+$/g, '')}`;
+const canonicalUrl = `${site.url}${normalizedCanonicalPath === '/' ? '/' : normalizedCanonicalPath}`;
 ---
 
 <!doctype html>
@@ -19,14 +25,14 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://verd.id" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Verd" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <link rel="canonical" href="https://verd.id" />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <script type="application/ld+json" set:html={JSON.stringify({
