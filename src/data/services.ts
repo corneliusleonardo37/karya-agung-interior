@@ -1,26 +1,32 @@
 export const services = [
   {
-    title: 'Interior Design',
-    description: 'Konsep, layout, moodboard, 3D visual, dan arahan desain ruang.',
+    title: 'Kitchen Set',
+    description:
+      'Pembuatan kitchen set untuk dapur rumah, apartemen, atau pantry dengan ukuran yang menyesuaikan kondisi ruang.',
   },
   {
-    title: 'Design & Build',
-    description: 'Desain dan pelaksanaan interior dalam satu alur kerja yang lebih terkontrol.',
+    title: 'Kabinet Custom',
+    description:
+      'Kabinet penyimpanan, lemari, meja kerja, kabinet bawah tangga, dan storage custom agar ruang lebih rapi dan fungsional.',
   },
   {
-    title: 'Project Management',
-    description: 'Koordinasi vendor, pengawasan pekerjaan, dokumentasi, dan laporan progres.',
+    title: 'Wall Panel & Backdrop TV',
+    description:
+      'Pembuatan wall panel dan backdrop TV untuk ruang keluarga, kamar, area tamu, atau area usaha agar terlihat lebih rapi dan modern.',
   },
   {
-    title: 'RAB & Budget Planning',
-    description: 'Membantu menyusun estimasi biaya dan prioritas pekerjaan agar budget lebih terarah.',
+    title: 'Interior Rumah',
+    description:
+      'Pengerjaan interior rumah dari desain sederhana, produksi furniture, hingga pemasangan di lokasi.',
   },
   {
-    title: 'Interior Fit-Out',
-    description: 'Produksi, instalasi, dan finishing interior sesuai desain dan kebutuhan ruang.',
+    title: 'Interior Apartemen',
+    description:
+      'Solusi interior compact untuk apartemen, mulai dari pantry, lemari, storage, meja kerja, sampai kabinet multifungsi.',
   },
   {
-    title: 'Custom Furniture',
-    description: 'Pembuatan kitchen set, wardrobe, storage, TV cabinet, dan furniture custom lainnya.',
+    title: 'Interior Usaha Kecil',
+    description:
+      'Pembuatan meja kasir, kabinet display, rak, dan interior ringan untuk toko, klinik, kantor kecil, atau usaha rumahan.',
   },
 ];

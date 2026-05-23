@@ -8,8 +8,8 @@ import { services } from '../data/services';
 ---
 
 <Layout
-  title="Layanan Verd — Design & Build Interior Transparan"
-  description="Layanan Verd meliputi interior design, design & build, project management, RAB, interior fit-out, dan custom furniture."
+  title="Layanan Karya Agung Interior — Kitchen Set, Kabinet Custom, dan Wall Panel"
+  description="Layanan Karya Agung Interior meliputi kitchen set, kabinet custom, wall panel, backdrop TV, interior rumah, apartemen, dan usaha kecil."
   canonicalPath="/layanan"
 >
   <main class="min-h-screen bg-stone-50 text-stone-900">
@@ -17,16 +17,16 @@ import { services } from '../data/services';
 
     <section class="mx-auto max-w-6xl px-6 pb-20 pt-32">
       <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
-        Layanan Verd
+        Layanan Karya Agung Interior
       </p>
 
       <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
-        Layanan desain, build, dan pengelolaan proyek interior.
+        Layanan interior untuk rumah yang lebih rapi dan fungsional.
       </h1>
 
       <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
-        Verd membantu klien merencanakan, mendesain, dan mengeksekusi interior dengan proses
-        yang lebih jelas, bertahap, dan terukur.
+        Kami membantu pengerjaan kitchen set, kabinet custom, wall panel,
+        backdrop TV, interior apartemen, dan kebutuhan furniture custom lainnya.
       </p>
     </section>
 
@@ -34,15 +34,15 @@ import { services } from '../data/services';
       <div class="mx-auto max-w-6xl">
         <div class="grid gap-6 md:grid-cols-2">
           {services.map((service) => (
-            <div class="rounded-3xl border border-stone-200 bg-stone-50 p-8">
+            <div class="rounded-3xl border border-stone-200 bg-stone-50 p-8 transition hover:-translate-y-1 hover:bg-white hover:shadow-sm">
               <h2 class="text-2xl font-bold">{service.title}</h2>
               <p class="mt-4 leading-8 text-stone-600">
                 {service.description}
               </p>
 
               <div class="mt-6 rounded-2xl bg-white p-5 text-sm leading-7 text-stone-600">
-                Layanan ini dapat disesuaikan dengan kebutuhan proyek, kondisi ruang,
-                target budget, dan prioritas pekerjaan.
+                Pekerjaan dapat disesuaikan dengan ukuran ruang, kebutuhan penyimpanan,
+                pilihan material, finishing, dan budget yang tersedia.
               </div>
             </div>
           ))}
@@ -57,13 +57,13 @@ import { services } from '../data/services';
         </p>
 
         <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-          Setiap proyek tidak harus dimulai dari paket besar.
+          Tidak harus mulai dari proyek interior besar.
         </h2>
 
         <p class="mt-5 max-w-3xl leading-8 text-stone-600">
-          Kamu bisa mulai dari konsultasi, desain, perencanaan biaya, atau pengelolaan proyek
-          sesuai kebutuhan. Verd membantu menyusun langkah yang paling masuk akal sebelum
-          pekerjaan dijalankan.
+          Anda bisa mulai dari satu area dulu, seperti kitchen set, kabinet TV,
+          lemari kamar, wall panel, atau storage tambahan. Kami bantu susun pilihan
+          yang paling masuk akal sesuai kebutuhan dan kondisi ruang.
         </p>
       </div>
     </section>

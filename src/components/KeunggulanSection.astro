@@ -1,0 +1,73 @@
+---
+const strengths = [
+  {
+    title: 'Spesialis Kabinet',
+    description:
+      'Berpengalaman mengerjakan kitchen set, lemari, storage, backdrop TV, dan furniture custom untuk kebutuhan rumah.',
+  },
+  {
+    title: 'Ukuran Mengikuti Ruang',
+    description:
+      'Setiap pekerjaan menyesuaikan kondisi asli di lapangan, supaya hasil lebih pas, rapi, dan nyaman digunakan.',
+  },
+  {
+    title: 'Material Bisa Disesuaikan',
+    description:
+      'Pilihan material dapat disesuaikan dengan kebutuhan, area penggunaan, tampilan yang diinginkan, dan budget.',
+  },
+  {
+    title: 'Proses Lebih Jelas',
+    description:
+      'Mulai dari konsultasi, survey, desain, estimasi biaya, produksi, sampai pemasangan dibuat lebih mudah dipahami.',
+  },
+  {
+    title: 'Cocok untuk Rumah Harian',
+    description:
+      'Fokus kami bukan hanya tampilan, tapi juga fungsi: penyimpanan cukup, mudah dibersihkan, dan nyaman dipakai setiap hari.',
+  },
+  {
+    title: 'Komunikasi Langsung',
+    description:
+      'Kebutuhan, revisi, dan progres pekerjaan bisa didiskusikan dengan lebih jelas selama proses berjalan.',
+  },
+];
+---
+
+<section id="keunggulan" class="bg-stone-50 px-6 py-20">
+  <div class="mx-auto max-w-6xl">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
+      Keunggulan
+    </p>
+
+    <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+      Lebih rapi dari tukang biasa, lebih realistis dari studio interior mahal.
+    </h2>
+
+    <p class="mt-5 max-w-2xl text-stone-600">
+      Karya Agung Interior membantu klien membuat interior yang enak dilihat,
+      nyaman dipakai, dan tetap masuk akal secara kebutuhan maupun budget.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {strengths.map((item) => (
+        <div class="rounded-3xl border border-stone-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-sm">
+          <h3 class="text-xl font-semibold">{item.title}</h3>
+          <p class="mt-3 leading-7 text-stone-600">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-3xl bg-emerald-950 p-8 text-white md:p-10">
+      <h3 class="text-2xl font-bold">
+        Interior rumah tidak harus rumit.
+      </h3>
+      <p class="mt-4 max-w-3xl leading-8 text-emerald-50/80">
+        Banyak orang ingin membuat kitchen set atau kabinet, tapi bingung mulai
+        dari ukuran, desain, material, sampai estimasi biaya. Kami bantu sederhanakan
+        prosesnya agar keputusan lebih jelas sebelum pekerjaan dimulai.
+      </p>
+    </div>
+  </div>
+</section>

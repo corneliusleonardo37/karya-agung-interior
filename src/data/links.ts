@@ -3,20 +3,32 @@ import { whatsappUrl } from './site';
 export const linkItems = [
   {
     title: 'Konsultasi via WhatsApp',
-    description: 'Diskusikan kebutuhan desain, interior, atau proyekmu.',
+    description: 'Kirim ukuran ruangan, foto lokasi, atau referensi desain untuk estimasi awal.',
     href: whatsappUrl,
     isPrimary: true,
   },
   {
-    title: 'Sistem Open-Book Verd',
-    description: 'Pelajari cara Verd membuat proses proyek lebih transparan.',
-    href: '/sistem-verd',
+    title: 'Lihat Portfolio',
+    description: 'Contoh pengerjaan kitchen set, kabinet custom, wall panel, dan interior rumah.',
+    href: '/portfolio',
+    isPrimary: false,
+  },
+  {
+    title: 'Tanya Estimasi Kitchen Set',
+    description: 'Mulai dari kebutuhan dapur, ukuran kabinet, material, dan finishing.',
+    href: whatsappUrl,
+    isPrimary: false,
+  },
+  {
+    title: 'Website Utama',
+    description: 'Lihat layanan, proses kerja, FAQ, dan informasi Karya Agung Interior.',
+    href: '/',
     isPrimary: false,
   },
   {
     title: 'Instagram',
-    description: 'Update desain, render, dan proses kerja Verd.',
-    href: 'https://instagram.com/verd.studio',
+    description: 'Update portfolio, proses produksi, dan inspirasi interior rumah.',
+    href: 'https://instagram.com/karyaagunginterior',
     isPrimary: false,
   },
 ];

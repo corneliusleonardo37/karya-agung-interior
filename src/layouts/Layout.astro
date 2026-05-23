@@ -3,8 +3,8 @@ import '../styles/global.css';
 import { site } from '../data/site';
 
 const {
-  title = 'Verd — Design & Build Interior Transparan',
-  description = 'Verd membantu pemilik rumah, apartemen, dan bisnis membangun interior dengan sistem desain, RAB, eksekusi, dan laporan biaya yang lebih transparan.',
+  title = 'Karya Agung Interior — Kitchen Set, Kabinet Custom, dan Wall Panel',
+  description = 'Karya Agung Interior membantu pengerjaan kitchen set, kabinet custom, wall panel, dan interior rumah dengan proses yang jelas dari desain, produksi, hingga pemasangan.',
   canonicalPath = '/',
 } = Astro.props;
 
@@ -26,7 +26,7 @@ const canonicalUrl = `${site.url}${normalizedCanonicalPath === '/' ? '/' : norma
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:site_name" content="Verd" />
+    <meta property="og:site_name" content={site.name} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
@@ -38,27 +38,23 @@ const canonicalUrl = `${site.url}${normalizedCanonicalPath === '/' ? '/' : norma
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      name: 'Verd',
+      name: site.name,
       description:
-        'Design & build interior dengan sistem biaya, desain, eksekusi, dan laporan proyek yang lebih transparan.',
-      url: 'https://verd.id',
-      areaServed: [
-        'BSD',
-        'Serpong',
-        'Tangerang Selatan',
-        'Jabodetabek'
-      ],
+        'Interior design and build untuk kitchen set, kabinet custom, wall panel, dan interior rumah.',
+      url: site.url,
+      areaServed: site.areas,
       serviceType: [
+        'Kitchen Set',
+        'Custom Cabinet',
+        'Wall Panel',
         'Interior Design',
-        'Design and Build',
-        'Interior Fit-Out',
-        'Project Management',
+        'Interior Build',
         'Custom Furniture'
       ],
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        telephone: '+6281234567890',
+        telephone: `+${site.whatsappNumber}`,
         availableLanguage: ['Indonesian']
       }
     })} />

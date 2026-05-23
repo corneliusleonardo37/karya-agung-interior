@@ -1,17 +1,42 @@
 export const faqs = [
   {
-    question: 'Apakah Verd hanya desain saja?',
+    question: 'Berapa harga kitchen set per meter?',
     answer:
-      'Tidak. Verd dapat membantu desain, perencanaan biaya, pelaksanaan interior, dan pengelolaan proyek sesuai kebutuhan.',
+      'Harga tergantung ukuran, material, finishing, aksesoris, dan kondisi lokasi. Untuk estimasi awal, Anda bisa kirim ukuran ruangan dan referensi desain melalui WhatsApp.',
   },
   {
-    question: 'Apa maksud sistem open-book?',
+    question: 'Apakah bisa survey ke lokasi?',
     answer:
-      'Open-book berarti struktur biaya dibuat lebih terbuka, sehingga klien bisa memahami arah penggunaan budget dengan lebih jelas.',
+      'Bisa. Survey membantu memastikan ukuran, kondisi dinding, titik listrik, plumbing, dan detail lain sebelum desain dan estimasi biaya dibuat.',
   },
   {
-    question: 'Apakah bisa konsultasi dulu?',
+    question: 'Apakah bisa hanya buat kabinet tanpa desain full interior?',
     answer:
-      'Bisa. Kamu bisa mulai dari konsultasi singkat melalui WhatsApp untuk membahas kebutuhan ruang, budget, dan prioritas pekerjaan.',
+      'Bisa. Kami menerima pengerjaan kitchen set, lemari, kabinet TV, storage, meja kerja, atau wall panel tanpa harus mengambil paket interior penuh.',
+  },
+  {
+    question: 'Material apa yang paling bagus?',
+    answer:
+      'Tidak ada satu material yang selalu paling bagus untuk semua kebutuhan. Pilihan material sebaiknya menyesuaikan area penggunaan, kelembapan, budget, dan tampilan yang diinginkan.',
+  },
+  {
+    question: 'Berapa lama proses pengerjaan?',
+    answer:
+      'Durasi tergantung ukuran dan tingkat kerumitan pekerjaan. Setelah desain, material, dan biaya disetujui, kami bisa memberikan estimasi waktu produksi dan pemasangan.',
+  },
+  {
+    question: 'Apakah bisa menyesuaikan budget?',
+    answer:
+      'Bisa. Kami dapat membantu menyesuaikan desain, material, dan prioritas pekerjaan agar tetap realistis dengan budget yang tersedia.',
+  },
+  {
+    question: 'Area pengerjaan di mana saja?',
+    answer:
+      'Kami melayani area Tangerang, BSD, Jakarta, dan sekitarnya. Untuk area lain, silakan konsultasikan terlebih dahulu melalui WhatsApp.',
+  },
+  {
+    question: 'Apakah ada garansi?',
+    answer:
+      'Garansi dapat diberikan sesuai jenis pekerjaan dan kesepakatan proyek. Detail garansi akan dijelaskan sebelum pekerjaan dimulai.',
   },
 ];

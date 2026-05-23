@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<Layout
+  title="Proses Kerja Karya Agung Interior — Dari Konsultasi sampai Pemasangan"
+  description="Pelajari proses kerja Karya Agung Interior dari konsultasi awal, survey, desain, estimasi biaya, produksi workshop, hingga pemasangan."
+  canonicalPath="/sistem-verd"
+>
+  <main class="min-h-screen bg-stone-50 text-stone-900">
+    <Header />
+
+    <section class="mx-auto max-w-6xl px-6 pb-20 pt-32">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
+        Proses Kerja
+      </p>
+
+      <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+        Proses interior yang jelas dari konsultasi sampai pemasangan.
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
+        Kami membantu klien memahami langkah pengerjaan interior, mulai dari kebutuhan ruang,
+        pengukuran, desain, estimasi biaya, produksi, hingga pemasangan di lokasi.
+      </p>
+    </section>
+
+    <section class="bg-white px-6 py-20">
+      <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+          <p class="text-sm font-semibold text-emerald-700">01</p>
+          <h2 class="mt-3 text-xl font-semibold">Konsultasi & Kebutuhan</h2>
+          <p class="mt-3 leading-7 text-stone-600">
+            Klien menjelaskan kebutuhan ruang, referensi desain, ukuran kasar, dan perkiraan budget.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+          <p class="text-sm font-semibold text-emerald-700">02</p>
+          <h2 class="mt-3 text-xl font-semibold">Survey & Pengukuran</h2>
+          <p class="mt-3 leading-7 text-stone-600">
+            Tim mengecek kondisi lokasi agar desain dan produksi menyesuaikan ukuran asli di lapangan.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+          <p class="text-sm font-semibold text-emerald-700">03</p>
+          <h2 class="mt-3 text-xl font-semibold">Desain & Estimasi</h2>
+          <p class="mt-3 leading-7 text-stone-600">
+            Desain, pilihan material, finishing, dan biaya disusun agar keputusan lebih jelas sebelum produksi.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+          <p class="text-sm font-semibold text-emerald-700">04</p>
+          <h2 class="mt-3 text-xl font-semibold">Produksi Workshop</h2>
+          <p class="mt-3 leading-7 text-stone-600">
+            Furniture diproduksi sesuai ukuran, desain, dan spesifikasi yang sudah disepakati.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+          <p class="text-sm font-semibold text-emerald-700">05</p>
+          <h2 class="mt-3 text-xl font-semibold">Pemasangan</h2>
+          <p class="mt-3 leading-7 text-stone-600">
+            Tim melakukan instalasi di lokasi, penyesuaian akhir, dan perapihan finishing.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+          <p class="text-sm font-semibold text-emerald-700">06</p>
+          <h2 class="mt-3 text-xl font-semibold">Pengecekan Akhir</h2>
+          <p class="mt-3 leading-7 text-stone-600">
+            Pekerjaan dicek kembali sebelum diserahterimakan agar hasil lebih rapi dan siap digunakan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+
+    <Footer />
+
+    <WhatsAppButton />
+  </main>
+</Layout>

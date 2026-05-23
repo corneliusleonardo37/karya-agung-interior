@@ -9,12 +9,17 @@ import { portfolioItems } from '../data/portfolio';
     </p>
 
     <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-      Contoh arah desain dan pekerjaan Verd.
+      Contoh pekerjaan interior untuk rumah, apartemen, dan usaha.
     </h2>
+
+    <p class="mt-5 max-w-2xl text-stone-600">
+      Beberapa contoh pengerjaan seperti kitchen set, kabinet custom, backdrop TV,
+      wall panel, dan interior ruang yang disesuaikan dengan kebutuhan klien.
+    </p>
 
     <div class="mt-10 grid gap-6 md:grid-cols-3">
       {portfolioItems.slice(0, 3).map((item) => (
-        <div class="overflow-hidden rounded-3xl border border-stone-200 bg-white">
+        <div class="overflow-hidden rounded-3xl border border-stone-200 bg-white transition hover:-translate-y-1 hover:shadow-sm">
           {item.image ? (
             <img
               src={item.image}

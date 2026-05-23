@@ -8,8 +8,8 @@ import { portfolioItems } from '../data/portfolio';
 ---
 
 <Layout
-  title="Portfolio Verd — Design & Build Interior"
-  description="Lihat contoh arah desain, konsep interior, dan portfolio pekerjaan Verd untuk rumah, apartemen, kitchen set, dan ruang komersial."
+  title="Portfolio Karya Agung Interior — Kitchen Set, Kabinet Custom, dan Wall Panel"
+  description="Lihat contoh pengerjaan Karya Agung Interior untuk kitchen set, kabinet custom, wall panel, backdrop TV, interior rumah, apartemen, dan usaha kecil."
   canonicalPath="/portfolio"
 >
   <main class="min-h-screen bg-stone-50 text-stone-900">
@@ -17,16 +17,16 @@ import { portfolioItems } from '../data/portfolio';
 
     <section class="mx-auto max-w-6xl px-6 pb-20 pt-32">
       <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
-        Portfolio Verd
+        Portfolio Karya Agung Interior
       </p>
 
       <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
-        Contoh arah desain dan pekerjaan interior Verd.
+        Contoh pengerjaan interior untuk rumah, apartemen, dan usaha.
       </h1>
 
       <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
-        Halaman ini akan menjadi tempat untuk menampilkan render, konsep, dan hasil pekerjaan
-        Verd. Untuk sementara, portfolio masih memakai placeholder.
+        Halaman ini menampilkan contoh pekerjaan seperti kitchen set, kabinet custom,
+        backdrop TV, wall panel, dan interior ruang yang disesuaikan dengan kebutuhan klien.
       </p>
     </section>
 
@@ -34,7 +34,7 @@ import { portfolioItems } from '../data/portfolio';
       <div class="mx-auto max-w-6xl">
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {portfolioItems.map((item) => (
-            <article class="overflow-hidden rounded-3xl border border-stone-200 bg-stone-50">
+            <article class="overflow-hidden rounded-3xl border border-stone-200 bg-stone-50 transition hover:-translate-y-1 hover:shadow-sm">
               {item.image ? (
                 <img
                   src={item.image}
@@ -76,12 +76,12 @@ import { portfolioItems } from '../data/portfolio';
           </p>
 
           <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-            Portfolio akan diperkuat dengan render, foto hasil, dan cerita proyek.
+            Portfolio akan diperkuat dengan foto hasil, proses produksi, dan detail pekerjaan.
           </h2>
 
           <p class="mt-5 max-w-3xl leading-8 text-stone-600">
             Nantinya setiap portfolio sebaiknya berisi nama proyek, lokasi, jenis pekerjaan,
-            tantangan ruang, solusi desain, material utama, dan dokumentasi visual.
+            kebutuhan klien, solusi desain, material utama, dan dokumentasi visual sebelum-sesudah.
           </p>
         </div>
       </div>

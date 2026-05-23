@@ -1,17 +1,17 @@
 export const site = {
-  name: 'Verd',
-  tagline: 'Design & Build Interior Transparan',
-  url: 'https://verd.id',
+  name: 'Karya Agung Interior',
+  tagline: 'Interior Design & Build untuk Rumah yang Lebih Rapi',
+  url: 'https://karyaagunginterior.com',
 
   whatsappNumber: '6281234567890',
   whatsappDisplay: '0812-3456-7890',
   whatsappMessage:
-    'Halo Verd, saya ingin konsultasi design & build interior.',
+    'Halo Karya Agung Interior, saya ingin konsultasi untuk pengerjaan interior. Saya ingin kirim ukuran ruangan dan referensi desain.',
 
-  instagram: '@verd.studio',
-  email: 'hello@verd.id',
+  instagram: '@karyaagunginterior',
+  email: 'hello@karyaagunginterior.com',
 
-  areas: ['BSD', 'Serpong', 'Tangerang Selatan', 'Jabodetabek'],
+  areas: ['BSD', 'Serpong', 'Tangerang Selatan', 'Jakarta', 'Jabodetabek'],
 };
 
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(

@@ -1,5 +1,36 @@
 ---
-import { services } from '../data/services';
+const services = [
+  {
+    title: 'Kitchen Set',
+    description:
+      'Pengerjaan kitchen set untuk dapur rumah, apartemen, atau pantry dengan ukuran yang menyesuaikan kondisi ruang.',
+  },
+  {
+    title: 'Kabinet Custom',
+    description:
+      'Kabinet penyimpanan, lemari, meja kerja, dan storage custom agar ruang lebih rapi dan fungsional.',
+  },
+  {
+    title: 'Wall Panel & Backdrop TV',
+    description:
+      'Pembuatan wall panel dan backdrop TV untuk membuat ruang keluarga, kamar, atau area usaha terlihat lebih rapi dan modern.',
+  },
+  {
+    title: 'Interior Rumah',
+    description:
+      'Pengerjaan interior rumah dari desain sederhana, produksi furniture, hingga pemasangan di lokasi.',
+  },
+  {
+    title: 'Interior Apartemen',
+    description:
+      'Solusi interior compact untuk apartemen, mulai dari kabinet, pantry, lemari, sampai area kerja kecil.',
+  },
+  {
+    title: 'Interior Usaha Kecil',
+    description:
+      'Pembuatan meja kasir, kabinet display, rak, dan interior ringan untuk toko, klinik, kantor kecil, atau usaha rumahan.',
+  },
+];
 ---
 
 <section id="layanan" class="bg-white px-6 py-20">
@@ -9,14 +40,20 @@ import { services } from '../data/services';
     </p>
 
     <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-      Layanan desain dan pengelolaan proyek interior yang lebih rapi.
+      Spesialis kitchen set, kabinet custom, dan interior rumah yang rapi.
     </h2>
+
+    <p class="mt-5 max-w-2xl text-stone-600">
+      Kami membantu merapikan kebutuhan interior dari tahap diskusi, pengukuran,
+      desain, produksi, sampai pemasangan. Fokusnya sederhana: hasil enak dilihat,
+      nyaman dipakai, dan sesuai kebutuhan ruang.
+    </p>
 
     <div class="mt-10 grid gap-6 md:grid-cols-3">
       {services.map((service) => (
-        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6 transition hover:-translate-y-1 hover:bg-white hover:shadow-sm">
           <h3 class="text-xl font-semibold">{service.title}</h3>
-          <p class="mt-3 text-stone-600">
+          <p class="mt-3 leading-7 text-stone-600">
             {service.description}
           </p>
         </div>
