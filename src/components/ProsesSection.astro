@@ -41,25 +41,25 @@ const processSteps = [
 
 <section id="proses" class="bg-white px-6 py-20">
   <div class="mx-auto max-w-6xl">
-    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
       Proses Kerja
     </p>
 
-    <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+    <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
       Alur kerja jelas dari konsultasi sampai pemasangan.
     </h2>
 
-    <p class="mt-5 max-w-2xl text-stone-600">
+    <p class="mt-5 max-w-2xl text-slate-600">
       Kami membuat proses pengerjaan lebih mudah dipahami, supaya klien tahu
       apa yang sedang dikerjakan, apa yang perlu diputuskan, dan kapan setiap tahap berjalan.
     </p>
 
     <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {processSteps.map((step) => (
-        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6 transition hover:-translate-y-1 hover:bg-white hover:shadow-sm">
-          <p class="text-sm font-semibold text-emerald-700">{step.number}</p>
-          <h3 class="mt-3 text-xl font-semibold">{step.title}</h3>
-          <p class="mt-3 leading-7 text-stone-600">
+        <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 transition hover:-translate-y-1 hover:bg-white hover:shadow-sm">
+          <p class="text-sm font-semibold text-slate-900">{step.number}</p>
+          <h3 class="mt-3 text-xl font-semibold text-slate-950">{step.title}</h3>
+          <p class="mt-3 leading-7 text-slate-600">
             {step.description}
           </p>
         </div>
