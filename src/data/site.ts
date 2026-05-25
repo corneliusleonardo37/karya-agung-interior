@@ -3,12 +3,12 @@ export const site = {
   tagline: 'Interior Design & Build untuk Rumah yang Lebih Rapi',
   url: 'https://karyaagunginterior.com',
 
-  whatsappNumber: '6281234567890',
-  whatsappDisplay: '0812-3456-7890',
+  whatsappNumber: '6281331874471',
+  whatsappDisplay: '0813-3187-4471',
   whatsappMessage:
     'Halo Karya Agung Interior, saya ingin konsultasi untuk pengerjaan interior. Saya ingin kirim ukuran ruangan dan referensi desain.',
 
-  instagram: '@karyaagunginterior',
+  instagram: '@karyaagung_interior',
   email: 'hello@karyaagunginterior.com',
 
   areas: ['BSD', 'Serpong', 'Tangerang Selatan', 'Jakarta', 'Jabodetabek'],

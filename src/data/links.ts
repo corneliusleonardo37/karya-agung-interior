@@ -22,7 +22,7 @@ export const linkItems = [
   {
     title: 'Instagram',
     description: 'Update portfolio, proses produksi, dan inspirasi interior rumah.',
-    href: 'https://instagram.com/karyaagunginterior',
+    href: 'https://instagram.com/karyaagung_interior',
     isPrimary: false,
   },
 ];
