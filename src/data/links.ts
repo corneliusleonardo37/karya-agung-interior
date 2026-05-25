@@ -14,12 +14,6 @@ export const linkItems = [
     isPrimary: false,
   },
   {
-    title: 'Tanya Estimasi Kitchen Set',
-    description: 'Mulai dari kebutuhan dapur, ukuran kabinet, material, dan finishing.',
-    href: whatsappUrl,
-    isPrimary: false,
-  },
-  {
     title: 'Website Utama',
     description: 'Lihat layanan, proses kerja, FAQ, dan informasi Karya Agung Interior.',
     href: '/',
