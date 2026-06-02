@@ -20,6 +20,16 @@ const canonicalUrl = `${site.url}${normalizedCanonicalPath === '/' ? '/' : norma
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH0Z8EX3T"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WH0Z8EX3T');
+    </script>
+
     <title>{title}</title>
 
     <meta property="og:title" content={title} />
