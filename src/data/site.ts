@@ -11,7 +11,7 @@ export const site = {
   instagram: '@karyaagung_interior',
   email: 'hello@karyaagunginterior.com',
 
-  areas: ['BSD', 'Serpong', 'Tangerang Selatan', 'Jakarta', 'Jabodetabek'],
+  areas: [ 'Tangerang Selatan',  'BSD', 'Serpong', 'Jakarta', 'Surabaya', 'Sidoarjo', ],
 };
 
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
