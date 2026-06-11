@@ -1,3 +1,7 @@
+---
+import { site } from '../data/site';
+---
+
 <footer class="bg-black px-6 py-12 text-slate-300">
   <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
     <div class="text-center">
@@ -8,34 +12,36 @@
       />
 
       <p class="mx-auto mt-4 max-w-sm text-sm leading-7 text-slate-400">
-        Spesialis kitchen set, kabinet custom, wall panel, dan interior rumah
-        yang rapi, fungsional, dan nyaman.
+        Karya Agung Interior adalah spesialis kitchen set, kabinet custom,
+        wardrobe, wall panel, backdrop TV, dan built-in furniture untuk rumah
+        dan area usaha.
+      </p>
+
+      <p class="mx-auto mt-3 max-w-sm text-xs leading-6 text-slate-500">
+        {site.legalName}
       </p>
     </div>
 
     <div>
       <h3 class="font-semibold text-white">Area Layanan</h3>
       <ul class="mt-4 space-y-2 text-sm text-slate-400">
-        <li>Tangerang Selatan</li>
-        <li>BSD</li>
-        <li>Serpong</li>
-        <li>Jakarta</li>
-        <li>Surabaya</li>
-        <li>Sidoarjo</li>
+        {site.areas.map((area) => (
+          <li>{area}</li>
+        ))}
       </ul>
     </div>
 
     <div>
       <h3 class="font-semibold text-white">Kontak</h3>
       <ul class="mt-4 space-y-2 text-sm text-slate-400">
-        <li>WhatsApp: 0813-3187-4471</li>
-        <li>Instagram: @karyaagung_interior</li>
-        <li>Email: hello@karyaagunginterior.com</li>
+        <li>WhatsApp: {site.whatsappDisplay}</li>
+        <li>Instagram: {site.instagram}</li>
+        <li>Email: {site.email}</li>
       </ul>
     </div>
   </div>
 
   <div class="mx-auto mt-10 max-w-6xl border-t border-slate-900 pt-6 text-center text-sm text-slate-500 md:text-left">
-    © 2026 Karya Agung Interior. All rights reserved.
+    Copyright 2026 {site.name}. All rights reserved.
   </div>
 </footer>

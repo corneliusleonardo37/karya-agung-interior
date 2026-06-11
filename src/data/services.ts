@@ -1,32 +1,32 @@
 export const services = [
   {
-    title: 'Kitchen Set',
+    title: 'Kitchen Set Custom',
     description:
-      'Pembuatan kitchen set untuk dapur rumah, apartemen, atau pantry dengan ukuran yang menyesuaikan kondisi ruang.',
+      'Pembuatan kitchen set untuk dapur rumah, apartemen, dan pantry dengan ukuran, layout penyimpanan, material, finishing, dan aksesoris yang disesuaikan.',
   },
   {
     title: 'Kabinet Custom',
     description:
-      'Kabinet penyimpanan, lemari, meja kerja, kabinet bawah tangga, dan storage custom agar ruang lebih rapi dan fungsional.',
+      'Kabinet penyimpanan, kabinet bawah tangga, kabinet display, meja kerja built-in, dan storage custom agar ruang lebih rapi dan mudah digunakan.',
+  },
+  {
+    title: 'Wardrobe & Lemari Custom',
+    description:
+      'Lemari pakaian dan wardrobe custom yang mengikuti ukuran kamar, kebutuhan gantungan, laci, rak, dan penyimpanan harian.',
   },
   {
     title: 'Wall Panel & Backdrop TV',
     description:
-      'Pembuatan wall panel dan backdrop TV untuk ruang keluarga, kamar, area tamu, atau area usaha agar terlihat lebih rapi dan modern.',
+      'Pembuatan wall panel dan backdrop TV untuk ruang keluarga, kamar, area tamu, atau area usaha dengan hasil rapi dan proporsional.',
   },
   {
-    title: 'Interior Rumah',
+    title: 'Built-in Furniture',
     description:
-      'Pengerjaan interior rumah dari desain sederhana, produksi furniture, hingga pemasangan di lokasi.',
+      'Furniture tanam seperti kabinet TV, rak display, meja kerja, credenza, dan storage built-in yang dibuat sesuai kondisi ruang.',
   },
   {
-    title: 'Interior Apartemen',
+    title: 'Cabinetry untuk Usaha',
     description:
-      'Solusi interior compact untuk apartemen, mulai dari pantry, lemari, storage, meja kerja, sampai kabinet multifungsi.',
-  },
-  {
-    title: 'Interior Usaha Kecil',
-    description:
-      'Pembuatan meja kasir, kabinet display, rak, dan interior ringan untuk toko, klinik, kantor kecil, atau usaha rumahan.',
+      'Kabinet display, meja kasir, rak penyimpanan, dan furniture custom ringan untuk toko, klinik, kantor kecil, atau usaha rumahan.',
   },
 ];

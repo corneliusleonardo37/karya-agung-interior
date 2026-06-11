@@ -1,12 +1,13 @@
 export const site = {
   name: 'Karya Agung Interior',
-  tagline: 'Interior Design & Build untuk Rumah yang Lebih Rapi',
+  legalName: 'PT Karya Agung Jayabersama',
+  tagline: 'Spesialis Kitchen Set dan Kabinet Custom',
   url: 'https://karyaagunginterior.com',
 
   whatsappNumber: '6281331874471',
   whatsappDisplay: '0813-3187-4471',
   whatsappMessage:
-    'Halo Karya Agung Interior, saya ingin konsultasi untuk pengerjaan interior. Saya ingin kirim ukuran ruangan dan referensi desain.',
+    'Halo Karya Agung Interior, saya ingin konsultasi untuk pembuatan kitchen set/kabinet custom. Saya ingin kirim foto area, ukuran kasar, lokasi proyek, dan referensi desain.',
 
   instagram: '@karyaagung_interior',
   email: 'hello@karyaagunginterior.com',

@@ -1,14 +1,14 @@
 export const systemValues = [
   {
-    title: 'Transparan',
-    description: 'Struktur biaya dan alur kerja dibuat lebih jelas sejak awal.',
-  },
-  {
     title: 'Terukur',
-    description: 'Proses desain, RAB, jadwal, dan pekerjaan dibuat bertahap.',
+    description: 'Ukuran, layout kabinet, material, aksesoris, dan estimasi biaya dibahas sebelum produksi.',
   },
   {
-    title: 'Terkelola',
-    description: 'Proyek dibantu dengan koordinasi, dokumentasi, dan laporan progres.',
+    title: 'Jelas',
+    description: 'Alur pembuatan kabinet dibuat bertahap dari konsultasi, pengukuran, desain 3D kabinet, produksi, sampai pemasangan.',
+  },
+  {
+    title: 'Realistis',
+    description: 'Pilihan kabinet disesuaikan dengan kebutuhan penyimpanan, kondisi ruang, dan budget.',
   },
 ];

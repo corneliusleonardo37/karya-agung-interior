@@ -4,12 +4,13 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import CTASection from '../components/CTASection.astro';
+import PricingSection from '../components/PricingSection.astro';
 import { services } from '../data/services';
 ---
 
 <Layout
-  title="Layanan Karya Agung Interior — Kitchen Set, Kabinet Custom, dan Wall Panel"
-  description="Layanan Karya Agung Interior meliputi kitchen set, kabinet custom, wall panel, backdrop TV, interior rumah, apartemen, dan usaha kecil."
+  title="Layanan Karya Agung Interior - Kitchen Set Custom, Kabinet, Wardrobe, dan Wall Panel"
+  description="Jasa pembuatan kitchen set custom, kabinet, wardrobe, wall panel, dan built-in furniture untuk Tangerang Selatan, BSD, Serpong, Jakarta, Surabaya, dan Sidoarjo."
   canonicalPath="/layanan"
 >
   <main class="min-h-screen bg-stone-50 text-stone-900">
@@ -21,12 +22,13 @@ import { services } from '../data/services';
       </p>
 
       <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
-        Layanan interior untuk rumah yang lebih rapi dan fungsional.
+        Layanan kitchen set dan kabinet custom untuk rumah yang lebih rapi.
       </h1>
 
       <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
-        Kami membantu pengerjaan kitchen set, kabinet custom, wall panel,
-        backdrop TV, interior apartemen, dan kebutuhan furniture custom lainnya.
+        Kami fokus membantu pembuatan cabinetry custom seperti kitchen set,
+        wardrobe, kabinet penyimpanan, backdrop TV, wall panel, dan built-in
+        furniture sesuai ukuran ruang.
       </p>
     </section>
 
@@ -41,14 +43,17 @@ import { services } from '../data/services';
               </p>
 
               <div class="mt-6 rounded-2xl bg-white p-5 text-sm leading-7 text-stone-600">
-                Pekerjaan dapat disesuaikan dengan ukuran ruang, kebutuhan penyimpanan,
-                pilihan material, finishing, dan budget yang tersedia.
+                Pekerjaan dapat disesuaikan dengan ukuran ruang, kebutuhan
+                penyimpanan, pilihan material, finishing, aksesoris, dan budget
+                yang tersedia.
               </div>
             </div>
           ))}
         </div>
       </div>
     </section>
+
+    <PricingSection />
 
     <section class="bg-stone-50 px-6 py-20">
       <div class="mx-auto max-w-6xl">
@@ -57,13 +62,14 @@ import { services } from '../data/services';
         </p>
 
         <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-          Tidak harus mulai dari proyek interior besar.
+          Tidak harus mulai dari proyek besar.
         </h2>
 
         <p class="mt-5 max-w-3xl leading-8 text-stone-600">
-          Anda bisa mulai dari satu area dulu, seperti kitchen set, kabinet TV,
-          lemari kamar, wall panel, atau storage tambahan. Kami bantu susun pilihan
-          yang paling masuk akal sesuai kebutuhan dan kondisi ruang.
+          Anda bisa mulai dari satu area dulu, seperti kitchen set, wardrobe,
+          kabinet TV, lemari kamar, wall panel, atau storage tambahan. Kami bantu
+          susun kebutuhan kabinet yang paling masuk akal sesuai ukuran ruang dan
+          budget.
         </p>
       </div>
     </section>

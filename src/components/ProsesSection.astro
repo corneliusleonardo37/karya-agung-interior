@@ -1,42 +1,5 @@
 ---
-const processSteps = [
-  {
-    number: '01',
-    title: 'Konsultasi Awal',
-    description:
-      'Ceritakan kebutuhan ruang, ukuran kasar, style yang diinginkan, dan perkiraan budget agar kami bisa memahami arah pengerjaan.',
-  },
-  {
-    number: '02',
-    title: 'Survey & Pengukuran',
-    description:
-      'Tim melakukan pengecekan lokasi dan pengukuran detail agar desain serta produksi menyesuaikan kondisi asli di lapangan.',
-  },
-  {
-    number: '03',
-    title: 'Desain & Penyesuaian',
-    description:
-      'Kami bantu susun desain yang fungsional, rapi, dan realistis untuk kebutuhan harian, bukan sekadar bagus di gambar.',
-  },
-  {
-    number: '04',
-    title: 'Estimasi Biaya',
-    description:
-      'Biaya pekerjaan disusun berdasarkan ukuran, material, finishing, dan tingkat kesulitan pengerjaan.',
-  },
-  {
-    number: '05',
-    title: 'Produksi Workshop',
-    description:
-      'Setelah desain dan biaya disetujui, furniture diproduksi di workshop sesuai ukuran dan spesifikasi yang sudah disepakati.',
-  },
-  {
-    number: '06',
-    title: 'Pemasangan & Finishing',
-    description:
-      'Tim melakukan pemasangan di lokasi, pengecekan akhir, dan perapihan finishing sebelum pekerjaan diserahterimakan.',
-  },
-];
+import { processSteps } from '../data/process';
 ---
 
 <section id="proses" class="bg-white px-6 py-20">
@@ -46,12 +9,13 @@ const processSteps = [
     </p>
 
     <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
-      Alur kerja jelas dari konsultasi sampai pemasangan.
+      Proses pembuatan kabinet dari konsultasi sampai pemasangan.
     </h2>
 
     <p class="mt-5 max-w-2xl text-slate-600">
-      Kami membuat proses pengerjaan lebih mudah dipahami, supaya klien tahu
-      apa yang sedang dikerjakan, apa yang perlu diputuskan, dan kapan setiap tahap berjalan.
+      Kami membuat proses pembuatan kitchen set dan kabinet custom lebih mudah
+      dipahami, mulai dari kebutuhan penyimpanan, ukuran ruang, pilihan material,
+      estimasi biaya, produksi, hingga pemasangan.
     </p>
 
     <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

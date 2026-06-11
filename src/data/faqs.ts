@@ -1,42 +1,47 @@
 export const faqs = [
   {
-    question: 'Berapa harga kitchen set per meter?',
+    question: 'Berapa harga kitchen set custom?',
     answer:
-      'Harga tergantung ukuran, material, finishing, aksesoris, dan kondisi lokasi. Untuk estimasi awal, Anda bisa kirim ukuran ruangan dan referensi desain melalui WhatsApp.',
+      'Kitchen set custom mulai dari Rp2.300.000 per meter lari. Harga final menyesuaikan ukuran, layout, material, top table, aksesoris, dan kondisi lokasi.',
   },
   {
-    question: 'Apakah bisa survey ke lokasi?',
+    question: 'Apakah konsultasi via WhatsApp gratis?',
     answer:
-      'Bisa. Survey membantu memastikan ukuran, kondisi dinding, titik listrik, plumbing, dan detail lain sebelum desain dan estimasi biaya dibuat.',
+      'Ya, konsultasi awal via WhatsApp gratis. Anda bisa mengirim foto area, ukuran kasar, lokasi, referensi desain, dan kebutuhan kabinet.',
   },
   {
-    question: 'Apakah bisa hanya buat kabinet tanpa desain full interior?',
+    question: 'Apakah desain 3D gratis?',
     answer:
-      'Bisa. Kami menerima pengerjaan kitchen set, lemari, kabinet TV, storage, meja kerja, atau wall panel tanpa harus mengambil paket interior penuh.',
+      'Ya, desain 3D kabinet gratis untuk membantu klien memahami bentuk dan layout kabinet. Render bisa dibuat by request, tetapi membutuhkan waktu lebih lama.',
   },
   {
-    question: 'Material apa yang paling bagus?',
+    question: 'Apakah pengukuran berbayar?',
     answer:
-      'Tidak ada satu material yang selalu paling bagus untuk semua kebutuhan. Pilihan material sebaiknya menyesuaikan area penggunaan, kelembapan, budget, dan tampilan yang diinginkan.',
+      'Ya, biaya pengukuran Rp500.000 dan akan mengurangi total tagihan jika lanjut produksi.',
   },
   {
-    question: 'Berapa lama proses pengerjaan?',
+    question: 'Kapan penawaran resmi diberikan?',
     answer:
-      'Durasi tergantung ukuran dan tingkat kerumitan pekerjaan. Setelah desain, material, dan biaya disetujui, kami bisa memberikan estimasi waktu produksi dan pemasangan.',
+      'Penawaran resmi diberikan setelah pengukuran, karena harga kabinet sangat bergantung pada ukuran, layout, material, aksesoris, dan kondisi lokasi.',
   },
   {
-    question: 'Apakah bisa menyesuaikan budget?',
+    question: 'Bagaimana sistem pembayarannya?',
     answer:
-      'Bisa. Kami dapat membantu menyesuaikan desain, material, dan prioritas pekerjaan agar tetap realistis dengan budget yang tersedia.',
+      'Pembayaran dilakukan bertahap: 50% untuk mulai produksi, 45% sebelum pengiriman dan pemasangan, dan 5% setelah serah terima.',
+  },
+  {
+    question: 'Apakah bisa membuat kabinet saja tanpa desain interior penuh?',
+    answer:
+      'Bisa. Karya Agung Interior fokus pada pembuatan kitchen set, wardrobe, kabinet custom, wall panel, backdrop TV, dan built-in furniture. Kami tidak memposisikan diri sebagai jasa desain interior full-service.',
+  },
+  {
+    question: 'Apakah menerima pekerjaan plafon, pagar, atau renovasi umum?',
+    answer:
+      'Untuk saat ini fokus utama kami adalah cabinetry custom seperti kitchen set, kabinet, wardrobe, wall panel, backdrop TV, dan built-in furniture.',
   },
   {
     question: 'Area pengerjaan di mana saja?',
     answer:
-      'Kami melayani area Tangerang, BSD, Jakarta, dan sekitarnya. Untuk area lain, silakan konsultasikan terlebih dahulu melalui WhatsApp.',
-  },
-  {
-    question: 'Apakah ada garansi?',
-    answer:
-      'Garansi dapat diberikan sesuai jenis pekerjaan dan kesepakatan proyek. Detail garansi akan dijelaskan sebelum pekerjaan dimulai.',
+      'Kami melayani Tangerang Selatan, BSD, Serpong, Jakarta, Surabaya, Sidoarjo, dan area sekitar sesuai kebutuhan pekerjaan.',
   },
 ];

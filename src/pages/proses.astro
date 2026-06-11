@@ -4,12 +4,36 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import CTASection from '../components/CTASection.astro';
+import { processSteps } from '../data/process';
+
+const paymentSteps = [
+  {
+    title: 'Biaya Pengukuran',
+    description:
+      'Biaya pengukuran Rp500.000 dan akan mengurangi total tagihan jika klien lanjut produksi.',
+  },
+  {
+    title: 'Termin 1 - 50%',
+    description:
+      'Dibayarkan untuk memulai produksi setelah desain 3D kabinet, spesifikasi, dan penawaran disetujui.',
+  },
+  {
+    title: 'Termin 2 - 45%',
+    description:
+      'Dibayarkan sebelum pengiriman dan pemasangan kabinet ke lokasi.',
+  },
+  {
+    title: 'Pelunasan - 5%',
+    description:
+      'Dibayarkan setelah pekerjaan selesai dicek bersama dan serah terima dilakukan.',
+  },
+];
 ---
 
 <Layout
-  title="Proses Kerja Karya Agung Interior — Dari Konsultasi sampai Pemasangan"
-  description="Pelajari proses kerja Karya Agung Interior dari konsultasi awal, survey, desain, estimasi biaya, produksi workshop, hingga pemasangan."
-  canonicalPath="/sistem-verd"
+  title="Proses Kerja Karya Agung Interior - Kitchen Set dan Kabinet Custom"
+  description="Pelajari proses pembuatan kitchen set dan kabinet custom dari konsultasi WhatsApp, survey, pengukuran, desain 3D kabinet, penawaran resmi, produksi workshop, hingga pemasangan."
+  canonicalPath="/proses"
 >
   <main class="min-h-screen bg-stone-50 text-stone-900">
     <Header />
@@ -20,63 +44,56 @@ import CTASection from '../components/CTASection.astro';
       </p>
 
       <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
-        Proses interior yang jelas dari konsultasi sampai pemasangan.
+        Proses pembuatan kabinet yang jelas dari konsultasi sampai pemasangan.
       </h1>
 
       <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
-        Kami membantu klien memahami langkah pengerjaan interior, mulai dari kebutuhan ruang,
-        pengukuran, desain, estimasi biaya, produksi, hingga pemasangan di lokasi.
+        Kami membantu klien memahami setiap tahap pengerjaan kitchen set,
+        wardrobe, kabinet custom, wall panel, dan built-in furniture agar
+        keputusan lebih jelas sebelum produksi dimulai.
       </p>
     </section>
 
     <section class="bg-white px-6 py-20">
-      <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
-          <p class="text-sm font-semibold text-slate-900">01</p>
-          <h2 class="mt-3 text-xl font-semibold">Konsultasi & Kebutuhan</h2>
-          <p class="mt-3 leading-7 text-stone-600">
-            Klien menjelaskan kebutuhan ruang, referensi desain, ukuran kasar, dan perkiraan budget.
-          </p>
-        </div>
+      <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {processSteps.map((step) => (
+          <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+            <p class="text-sm font-semibold text-slate-900">{step.number}</p>
+            <h2 class="mt-3 text-xl font-semibold">{step.title}</h2>
+            <p class="mt-3 leading-7 text-stone-600">
+              {step.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
 
-        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
-          <p class="text-sm font-semibold text-slate-900">02</p>
-          <h2 class="mt-3 text-xl font-semibold">Survey & Pengukuran</h2>
-          <p class="mt-3 leading-7 text-stone-600">
-            Tim mengecek kondisi lokasi agar desain dan produksi menyesuaikan ukuran asli di lapangan.
-          </p>
-        </div>
+    <section class="bg-stone-50 px-6 py-20">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
+          Harga & Pembayaran
+        </p>
 
-        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
-          <p class="text-sm font-semibold text-slate-900">03</p>
-          <h2 class="mt-3 text-xl font-semibold">Desain & Estimasi</h2>
-          <p class="mt-3 leading-7 text-stone-600">
-            Desain, pilihan material, finishing, dan biaya disusun agar keputusan lebih jelas sebelum produksi.
-          </p>
-        </div>
+        <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+          Pembayaran bertahap agar proses produksi tetap jelas.
+        </h2>
 
-        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
-          <p class="text-sm font-semibold text-slate-900">04</p>
-          <h2 class="mt-3 text-xl font-semibold">Produksi Workshop</h2>
-          <p class="mt-3 leading-7 text-stone-600">
-            Furniture diproduksi sesuai ukuran, desain, dan spesifikasi yang sudah disepakati.
-          </p>
-        </div>
+        <p class="mt-5 max-w-3xl leading-8 text-stone-600">
+          Konsultasi awal via WhatsApp dan desain 3D kabinet gratis. Penawaran
+          resmi baru diberikan setelah pengukuran, karena harga final mengikuti
+          ukuran, layout, material, aksesoris, top table, tingkat kesulitan, dan
+          kondisi lokasi.
+        </p>
 
-        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
-          <p class="text-sm font-semibold text-slate-900">05</p>
-          <h2 class="mt-3 text-xl font-semibold">Pemasangan</h2>
-          <p class="mt-3 leading-7 text-stone-600">
-            Tim melakukan instalasi di lokasi, penyesuaian akhir, dan perapihan finishing.
-          </p>
-        </div>
-
-        <div class="rounded-3xl border border-stone-200 bg-stone-50 p-6">
-          <p class="text-sm font-semibold text-slate-900">06</p>
-          <h2 class="mt-3 text-xl font-semibold">Pengecekan Akhir</h2>
-          <p class="mt-3 leading-7 text-stone-600">
-            Pekerjaan dicek kembali sebelum diserahterimakan agar hasil lebih rapi dan siap digunakan.
-          </p>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {paymentSteps.map((item) => (
+            <div class="rounded-3xl border border-stone-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-stone-950">{item.title}</h3>
+              <p class="mt-3 leading-7 text-stone-600">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
