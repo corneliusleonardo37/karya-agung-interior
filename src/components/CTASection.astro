@@ -4,6 +4,9 @@ import { site } from '../data/site';
 const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
   'Halo Karya Agung Interior, saya ingin cek estimasi kitchen set/kabinet custom. Berikut foto area, ukuran kasar, dan referensi yang saya suka.'
 )}`;
+
+const { variant = 'cards' } = Astro.props;
+const isSimple = variant === 'simple';
 ---
 
 <section class="bg-slate-950 px-6 py-20 text-white">
@@ -22,28 +25,35 @@ const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURICompon
       survey atau produksi.
     </p>
 
-    <div class="mx-auto mt-8 grid max-w-2xl gap-3 text-left sm:grid-cols-3">
-      <div class="rounded-2xl bg-white/10 p-4">
-        <p class="text-sm font-semibold text-white">1. Kirim Foto</p>
-        <p class="mt-2 text-sm leading-6 text-slate-300">
-          Foto area yang ingin dibuat kitchen set atau kabinet.
-        </p>
-      </div>
+    {isSimple ? (
+      <p class="mx-auto mt-6 max-w-2xl text-sm leading-7 text-slate-300">
+        Untuk estimasi awal, cukup kirim foto area, ukuran kasar, dan referensi
+        kabinet yang Anda suka.
+      </p>
+    ) : (
+      <div class="mx-auto mt-8 grid max-w-2xl gap-3 text-left sm:grid-cols-3">
+        <div class="rounded-2xl bg-white/10 p-4">
+          <p class="text-sm font-semibold text-white">1. Kirim Foto</p>
+          <p class="mt-2 text-sm leading-6 text-slate-300">
+            Foto area yang ingin dibuat kitchen set atau kabinet.
+          </p>
+        </div>
 
-      <div class="rounded-2xl bg-white/10 p-4">
-        <p class="text-sm font-semibold text-white">2. Kirim Ukuran</p>
-        <p class="mt-2 text-sm leading-6 text-slate-300">
-          Ukuran kasar ruangan atau kabinet.
-        </p>
-      </div>
+        <div class="rounded-2xl bg-white/10 p-4">
+          <p class="text-sm font-semibold text-white">2. Kirim Ukuran</p>
+          <p class="mt-2 text-sm leading-6 text-slate-300">
+            Ukuran kasar ruangan atau kabinet.
+          </p>
+        </div>
 
-      <div class="rounded-2xl bg-white/10 p-4">
-        <p class="text-sm font-semibold text-white">3. Kirim Referensi</p>
-        <p class="mt-2 text-sm leading-6 text-slate-300">
-          Contoh kabinet, finishing, atau style yang disukai.
-        </p>
+        <div class="rounded-2xl bg-white/10 p-4">
+          <p class="text-sm font-semibold text-white">3. Kirim Referensi</p>
+          <p class="mt-2 text-sm leading-6 text-slate-300">
+            Contoh kabinet, finishing, atau style yang disukai.
+          </p>
+        </div>
       </div>
-    </div>
+    )}
 
     <a
       href={whatsappUrl}

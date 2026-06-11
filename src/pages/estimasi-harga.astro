@@ -1,0 +1,388 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { site } from '../data/site';
+
+const estimateWhatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
+  'Halo Karya Agung Interior, saya ingin cek estimasi harga kitchen set/kabinet custom. Saya ingin kirim foto area, ukuran kasar, lokasi proyek, dan referensi desain.'
+)}`;
+
+const priceRows = [
+  {
+    service: 'Kitchen Set Custom',
+    price: 'Mulai Rp2,3 juta / meter lari',
+    note: 'Untuk kitchen set dapur, pantry, kabinet atas-bawah, dan area memasak.',
+  },
+  {
+    service: 'Custom Cabinet',
+    price: 'Mulai Rp2,3 juta / meter persegi',
+    note: 'Untuk wardrobe, kabinet TV, storage custom, lemari, backdrop, dan built-in furniture.',
+  },
+  {
+    service: 'Top Table',
+    price: 'Sekitar Rp2,5 juta / meter',
+    note: 'Menyesuaikan jenis material dan detail pemasangan.',
+  },
+  {
+    service: 'LED Kabinet',
+    price: 'Rp150 ribu / meter',
+    note: 'Opsional untuk area display, kabinet gantung, atau area kerja dapur.',
+  },
+  {
+    service: 'Laci Tambahan',
+    price: 'Rp300 ribu / laci',
+    note: 'Free 3 laci untuk setiap kitchen set atau cabinet. Laci tambahan dikenakan biaya terpisah.',
+  },
+  {
+    service: 'Survey & Pengukuran',
+    price: 'Rp500 ribu',
+    note: 'Biaya pengukuran dipotong dari total tagihan jika lanjut produksi.',
+  },
+];
+
+const includedItems = [
+  'HPL Taco',
+  'Bagian dalam melamin putih',
+  'Engsel dan rel soft close Taco atau setara',
+  'Handle minimalis / coakan',
+  'Free 3 laci untuk setiap kitchen set atau cabinet',
+  'Desain 3D kabinet gratis',
+  'Konsultasi awal via WhatsApp gratis',
+];
+
+const paymentSteps = [
+  {
+    title: 'Biaya pengukuran: Rp500.000',
+    description: 'Dipotong dari total jika lanjut produksi.',
+  },
+  {
+    title: 'Termin 1: 50%',
+    description: 'Dibayarkan untuk memulai produksi.',
+  },
+  {
+    title: 'Termin 2: 45%',
+    description: 'Dibayarkan sebelum pengiriman dan pemasangan.',
+  },
+  {
+    title: 'Termin 3 / Pelunasan: 5%',
+    description: 'Dibayarkan setelah serah terima pekerjaan.',
+  },
+];
+
+const priceFaqs = [
+  {
+    question: 'Berapa harga kitchen set custom per meter?',
+    answer:
+      'Kitchen set custom mulai dari Rp2,3 juta per meter lari. Harga final menyesuaikan ukuran, layout, material, top table, aksesoris, dan kondisi lokasi.',
+  },
+  {
+    question: 'Berapa harga custom cabinet?',
+    answer:
+      'Custom cabinet mulai dari Rp2,3 juta per meter persegi. Harga final tergantung ukuran, fungsi kabinet, material, finishing, dan detail pemasangan.',
+  },
+  {
+    question: 'Apakah konsultasi WhatsApp gratis?',
+    answer:
+      'Ya, konsultasi awal via WhatsApp gratis. Anda bisa mengirim foto area, ukuran kasar, lokasi proyek, dan referensi desain.',
+  },
+  {
+    question: 'Apakah desain 3D kabinet gratis?',
+    answer:
+      'Ya, desain 3D kabinet gratis untuk membantu klien memahami bentuk, layout, dan pembagian kabinet.',
+  },
+  {
+    question: 'Apakah pengukuran berbayar?',
+    answer:
+      'Ya, biaya pengukuran Rp500.000 dan dipotong dari total tagihan jika lanjut produksi.',
+  },
+  {
+    question: 'Kapan penawaran resmi diberikan?',
+    answer:
+      'Penawaran resmi diberikan setelah pengukuran, karena harga kabinet custom sangat bergantung pada ukuran aktual, kondisi lokasi, material, top table, aksesoris, dan tingkat kesulitan.',
+  },
+  {
+    question: 'Apakah harga sudah termasuk top table?',
+    answer:
+      'Top table dihitung terpisah, dengan estimasi sekitar Rp2,5 juta per meter. Harga final tergantung jenis material dan detail pemasangan.',
+  },
+  {
+    question: 'Apakah bisa cek estimasi dari foto dulu?',
+    answer:
+      'Bisa. Kirim foto area, ukuran kasar, lokasi proyek, dan referensi desain melalui WhatsApp untuk estimasi awal.',
+  },
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Estimasi Harga Kitchen Set dan Kabinet Custom',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: site.name,
+    legalName: site.legalName,
+    url: site.url,
+    telephone: `+${site.whatsappNumber}`,
+    areaServed: site.areas,
+  },
+  areaServed: site.areas,
+  serviceType: [
+    'Kitchen Set Custom',
+    'Custom Cabinet',
+    'Wardrobe Custom',
+    'Built-in Furniture',
+    'Wall Panel',
+    'Backdrop TV',
+    'Cabinetry',
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: priceFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Layout
+  title="Estimasi Harga Kitchen Set dan Kabinet Custom | Karya Agung Interior"
+  description="Lihat estimasi harga awal kitchen set custom, kabinet custom, top table, LED kabinet, laci tambahan, dan biaya pengukuran dari Karya Agung Interior. Melayani BSD, Tangerang Selatan, Serpong, Jakarta, Surabaya, dan Sidoarjo."
+  keywords="estimasi harga kitchen set, harga kitchen set custom, harga kabinet custom, kitchen set BSD, kitchen set Tangerang Selatan, kabinet custom BSD, kabinet custom Tangerang Selatan, wardrobe custom, built-in furniture, wall panel, backdrop TV"
+  canonicalPath="/estimasi-harga"
+>
+  <main class="min-h-screen bg-stone-50 text-stone-900">
+    <Header />
+
+    <section class="mx-auto max-w-6xl px-6 pb-20 pt-32">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
+        ESTIMASI HARGA
+      </p>
+
+      <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+        Estimasi Harga Kitchen Set dan Kabinet Custom
+      </h1>
+
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-stone-600">
+        Gunakan halaman ini sebagai gambaran awal budget sebelum survey. Harga
+        final tetap menyesuaikan ukuran, layout, material, aksesoris, top table,
+        tingkat kesulitan, dan kondisi lokasi.
+      </p>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a
+          href={estimateWhatsappUrl}
+          target="_blank"
+          class="rounded-full bg-slate-900 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-950"
+        >
+          Cek Estimasi via WhatsApp
+        </a>
+
+        <a
+          href={estimateWhatsappUrl}
+          target="_blank"
+          class="rounded-full border border-slate-300 px-6 py-3 text-center text-sm font-semibold text-slate-800 transition hover:bg-white"
+        >
+          Konsultasi Dulu
+        </a>
+      </div>
+
+      <p class="mt-4 max-w-2xl text-sm leading-6 text-stone-500">
+        Kirim foto area, ukuran kasar, lokasi proyek, dan referensi desain agar
+        estimasi awal lebih mudah dihitung.
+      </p>
+    </section>
+
+    <section class="bg-white px-6 py-20">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
+          Estimasi Harga Awal
+        </p>
+
+        <div class="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm shadow-slate-950/5">
+          {priceRows.map((item) => (
+            <div class="grid gap-4 border-b border-slate-200 p-6 last:border-b-0 md:grid-cols-[0.9fr_0.8fr_1.2fr] md:items-center">
+              <h2 class="text-xl font-semibold text-slate-950">{item.service}</h2>
+              <p class="text-lg font-bold text-slate-950">{item.price}</p>
+              <p class="leading-7 text-slate-600">{item.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 px-6 py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+            Harga dasar sudah termasuk
+          </h2>
+
+          <ul class="mt-8 grid gap-4 leading-7 text-slate-700 md:grid-cols-2">
+            {includedItems.map((item) => (
+              <li class="flex gap-3">
+                <span class="mt-3 h-2 w-2 shrink-0 rounded-full bg-slate-900"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p class="mt-6 text-sm leading-7 text-slate-500">
+            Render bisa dibuat by request, tetapi membutuhkan waktu pengerjaan
+            lebih lama.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-20">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-start">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
+            Penawaran Resmi
+          </p>
+          <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+            Kenapa penawaran resmi baru diberikan setelah pengukuran?
+          </h2>
+          <p class="mt-5 max-w-3xl leading-8 text-slate-600">
+            Harga kabinet custom sangat dipengaruhi ukuran aktual, kondisi
+            dinding, detail lokasi, layout kabinet, pilihan material, top table,
+            aksesoris, dan tingkat kesulitan pemasangan. Karena itu, estimasi
+            awal bisa diberikan lewat WhatsApp, tetapi penawaran resmi baru
+            dibuat setelah pengukuran.
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-slate-950 p-6 text-white md:p-8">
+          <h3 class="text-xl font-semibold">Siap ukur lokasi?</h3>
+          <p class="mt-3 leading-7 text-slate-300">
+            Pengukuran membantu memastikan ukuran, kondisi lokasi, dan kebutuhan
+            aksesoris sebelum produksi.
+          </p>
+          <a
+            href={estimateWhatsappUrl}
+            target="_blank"
+            class="mt-6 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
+          >
+            Jadwalkan Pengukuran
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 px-6 py-20">
+      <div class="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
+            Contoh Hitung
+          </p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+            Contoh cara hitung sederhana
+          </h2>
+          <p class="mt-5 leading-8 text-slate-600">
+            Misalnya kitchen set bawah sepanjang 3 meter, estimasi awal kabinetnya
+            sekitar 3 x Rp2,3 juta = Rp6,9 juta, belum termasuk top table, LED,
+            atau tambahan aksesoris jika dibutuhkan.
+          </p>
+          <p class="mt-5 text-sm leading-7 text-slate-500">
+            Contoh ini hanya simulasi kasar. Harga final mengikuti hasil
+            pengukuran dan spesifikasi.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
+            Pembayaran
+          </p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+            Sistem pembayaran bertahap
+          </h2>
+          <p class="mt-5 leading-8 text-slate-600">
+            Untuk menjaga proses produksi tetap jelas, pembayaran dilakukan
+            bertahap.
+          </p>
+          <div class="mt-6 space-y-4">
+            {paymentSteps.map((step) => (
+              <div class="rounded-2xl bg-slate-50 p-4">
+                <h3 class="font-semibold text-slate-950">{step.title}</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-20">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
+          Area Layanan
+        </p>
+        <h2 class="mt-4 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+          Area layanan
+        </h2>
+        <p class="mt-5 max-w-3xl leading-8 text-slate-600">
+          Karya Agung Interior melayani pembuatan kitchen set dan kabinet custom
+          untuk area BSD, Tangerang Selatan, Serpong, Jakarta, Surabaya, Sidoarjo,
+          dan sekitarnya.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 px-6 py-20">
+      <div class="mx-auto max-w-4xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-900">
+          FAQ
+        </p>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+          FAQ estimasi harga
+        </h2>
+
+        <div class="mt-10 space-y-4">
+          {priceFaqs.map((faq) => (
+            <div class="rounded-3xl border border-slate-200 bg-white p-6">
+              <h3 class="font-semibold text-slate-950">{faq.question}</h3>
+              <p class="mt-3 leading-7 text-slate-600">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-950 px-6 py-20 text-white">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-300">
+          Mulai Diskusi
+        </p>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight md:text-5xl">
+          Mau cek estimasi kitchen set atau kabinet custom?
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl leading-8 text-slate-300">
+          Kirim foto area, ukuran kasar, lokasi, dan referensi desain. Kami bantu
+          cek estimasi awal sebelum survey.
+        </p>
+        <a
+          href={estimateWhatsappUrl}
+          target="_blank"
+          class="mt-8 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
+        >
+          Cek Estimasi via WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <Footer />
+    <WhatsAppButton />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </main>
+</Layout>

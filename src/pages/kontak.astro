@@ -6,30 +6,12 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { site, whatsappUrl } from '../data/site';
 
 const consultationItems = [
-  {
-    title: '1. Foto area',
-    description: 'Foto area yang ingin dibuat kitchen set, kabinet, wardrobe, atau wall panel.',
-  },
-  {
-    title: '2. Ukuran kasar',
-    description: 'Panjang, tinggi, atau ukuran ruangan tidak harus terlalu detail untuk konsultasi awal.',
-  },
-  {
-    title: '3. Lokasi proyek',
-    description: 'Misalnya BSD, Serpong, Tangerang Selatan, Jakarta, Surabaya, atau Sidoarjo.',
-  },
-  {
-    title: '4. Jenis kabinet',
-    description: 'Kitchen set, wardrobe, kabinet TV, storage, backdrop TV, atau kabinet display.',
-  },
-  {
-    title: '5. Referensi desain',
-    description: 'Bisa dari Pinterest, Instagram, katalog, render, atau foto kabinet yang Anda suka.',
-  },
-  {
-    title: '6. Budget & aksesoris',
-    description: 'Sertakan perkiraan budget serta kebutuhan top table, laci, LED, atau aksesoris tambahan.',
-  },
+  'Foto area yang ingin dibuat kitchen set, kabinet, wardrobe, atau wall panel.',
+  'Ukuran kasar area atau ruangan.',
+  'Lokasi proyek, misalnya BSD, Serpong, Tangerang Selatan, Jakarta, Surabaya, atau Sidoarjo.',
+  'Jenis kabinet yang dibutuhkan.',
+  'Referensi desain dari Pinterest, Instagram, katalog, render, atau foto kabinet.',
+  'Perkiraan budget dan kebutuhan aksesoris seperti top table, laci, LED, atau aksesoris tambahan.',
 ];
 ---
 
@@ -122,16 +104,19 @@ const consultationItems = [
           Siapkan data sederhana untuk estimasi awal.
         </h2>
 
-        <div class="mt-8 grid gap-4 md:grid-cols-2">
-          {consultationItems.map((item) => (
-            <div class="rounded-2xl bg-white/10 p-5">
-              <h3 class="font-semibold text-white">{item.title}</h3>
-              <p class="mt-2 text-sm leading-7 text-slate-300">
-                {item.description}
-              </p>
-            </div>
+        <p class="mt-5 max-w-3xl leading-8 text-slate-300">
+          Agar estimasi awal lebih mudah dihitung, Anda bisa menyiapkan beberapa
+          informasi berikut sebelum menghubungi kami.
+        </p>
+
+        <ol class="mt-8 grid gap-x-8 gap-y-5 text-sm leading-7 text-slate-300 md:grid-cols-2">
+          {consultationItems.map((item, index) => (
+            <li class="flex gap-4">
+              <span class="font-semibold text-white">{index + 1}.</span>
+              <span>{item}</span>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
 
