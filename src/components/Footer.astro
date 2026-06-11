@@ -3,25 +3,27 @@ import { site } from '../data/site';
 ---
 
 <footer class="bg-black px-6 py-12 text-slate-300">
-  <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
-    <div class="text-center">
+  <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
+    <!-- Logo -->
+    <div class="flex h-full items-center justify-center">
       <img
         src="/karya-agung-logo-putih.svg"
         alt="Karya Agung Interior logo"
-        class="mx-auto h-20 w-auto"
+        class="h-26 w-auto"
       />
+    </div>
 
-      <p class="mx-auto mt-4 max-w-sm text-sm leading-7 text-slate-400">
+    <!-- Deskripsi -->
+    <div>
+      <p class="mt-0 text-sm leading-7 text-slate-400">
         Karya Agung Interior adalah spesialis kitchen set, kabinet custom,
         wardrobe, wall panel, backdrop TV, dan built-in furniture untuk rumah
         dan area usaha.
       </p>
 
-      <p class="mx-auto mt-3 max-w-sm text-xs leading-6 text-slate-500">
-        {site.legalName}
-      </p>
     </div>
 
+    <!-- Area Layanan -->
     <div>
       <h3 class="font-semibold text-white">Area Layanan</h3>
       <ul class="mt-4 space-y-2 text-sm text-slate-400">
@@ -29,16 +31,39 @@ import { site } from '../data/site';
           <li>{area}</li>
         ))}
       </ul>
+      <p class="mt-5 text-xs font-medium text-slate-500">
+        {site.legalName}
+      </p>
     </div>
 
+    <!-- Kontak -->
     <div>
       <h3 class="font-semibold text-white">Kontak</h3>
       <ul class="mt-4 space-y-2 text-sm text-slate-400">
-        <li>WhatsApp: {site.whatsappDisplay}</li>
-        <li>Instagram: {site.instagram}</li>
-        <li>Email: {site.email}</li>
         <li>
-          <a href="/estimasi-harga" class="transition hover:text-white">
+          <a
+            href={site.whatsappUrl}
+            class="transition hover:text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp: {site.whatsappDisplay}
+          </a>
+        </li>
+
+        <li>
+          <a
+            href={site.instagramUrl}
+            class="transition hover:text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram: {site.instagram}
+          </a>
+        </li>
+
+        <li>
+          <a href="/estimasi-harga/" class="transition hover:text-white">
             Estimasi Harga
           </a>
         </li>

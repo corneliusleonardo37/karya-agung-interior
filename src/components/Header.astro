@@ -2,12 +2,14 @@
 import { whatsappUrl } from '../data/site';
 
 const currentPath = Astro.url.pathname;
+const normalizedCurrentPath =
+  currentPath === '/' ? '/' : `/${currentPath.replace(/^\/+|\/+$/g, '')}`;
 
 const navItems = [
   {
     label: 'Layanan',
-    href: '/layanan',
-    isActive: currentPath === '/layanan',
+    href: '/layanan/',
+    isActive: normalizedCurrentPath === '/layanan',
   },
   {
     label: 'Proses',
@@ -16,8 +18,8 @@ const navItems = [
   },
   {
     label: 'Portfolio',
-    href: '/portfolio',
-    isActive: currentPath === '/portfolio',
+    href: '/portfolio/',
+    isActive: normalizedCurrentPath === '/portfolio',
   },
   {
     label: 'FAQ',
@@ -26,8 +28,8 @@ const navItems = [
   },
   {
     label: 'Kontak',
-    href: '/kontak',
-    isActive: currentPath === '/kontak',
+    href: '/kontak/',
+    isActive: normalizedCurrentPath === '/kontak',
   },
 ];
 ---

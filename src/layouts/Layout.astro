@@ -9,9 +9,9 @@ const {
   canonicalPath = '/',
 } = Astro.props;
 
-const normalizedCanonicalPath =
-  canonicalPath === '/' ? '/' : `/${canonicalPath.replace(/^\/+|\/+$/g, '')}`;
-const canonicalUrl = `${site.url}${normalizedCanonicalPath === '/' ? '/' : normalizedCanonicalPath}`;
+const trimmedCanonicalPath = canonicalPath.replace(/^\/+|\/+$/g, '');
+const normalizedCanonicalPath = trimmedCanonicalPath === '' ? '/' : `/${trimmedCanonicalPath}/`;
+const canonicalUrl = `${site.url}${normalizedCanonicalPath}`;
 ---
 
 <!doctype html>

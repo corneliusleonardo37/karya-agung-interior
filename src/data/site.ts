@@ -6,13 +6,14 @@ export const site = {
 
   whatsappNumber: '6281331874471',
   whatsappDisplay: '0813-3187-4471',
-  whatsappMessage:
-    'Halo Karya Agung Interior, saya ingin konsultasi untuk pembuatan kitchen set/kabinet custom. Saya ingin kirim foto area, ukuran kasar, lokasi proyek, dan referensi desain.',
-
+  whatsappUrl:
+  'https://wa.me/6281331874471?text=Halo%20Karya%20Agung%20Interior,%20saya%20ingin%20konsultasi%20untuk%20pembuatan%20kitchen%20set%2Fkabinet%20custom.',
+  
   instagram: '@karyaagung_interior',
+  instagramUrl: 'https://www.instagram.com/karyaagung_interior',
   email: 'hello@karyaagunginterior.com',
 
-  areas: [ 'Tangerang Selatan',  'BSD', 'Serpong', 'Jakarta', 'Surabaya', 'Sidoarjo', ],
+  areas: [ 'Tangerang Selatan, BSD, Serpong, Jakarta, Surabaya, Sidoarjo', ],
 };
 
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(

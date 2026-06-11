@@ -10,7 +10,7 @@ export const linkItems = [
   {
     title: 'Lihat Portfolio',
     description: 'Contoh pengerjaan kitchen set, kabinet custom, wardrobe, wall panel, dan built-in furniture.',
-    href: '/portfolio',
+    href: '/portfolio/',
     isPrimary: false,
   },
   {
